@@ -9,15 +9,15 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model UdyamSubmission {
   id      Int    @id @default(autoincrement())
-  aadhaar String
-  otp     String
-  pan     String
+  aadhaar String @db.VarChar(12)
+  otp     String @db.VarChar(6)
+  pan     String @db.VarChar(10)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 

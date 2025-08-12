@@ -43,6 +43,8 @@ export default function UdyamForm() {
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const [formData, setFormData] = useState<FormData>({});
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+
   const {
     register,
     handleSubmit,
@@ -114,7 +116,7 @@ export default function UdyamForm() {
         // Final submission with all data
         const finalData = { ...formData, pan: data.pan };
 
-        const response = await fetch('http://localhost:3001/submit', {
+        const response = await fetch(`${API_URL}/submit`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
