@@ -1,0 +1,62 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "title": "Aadhaar Verification",
+      "description": "Enter your 12-digit Aadhaar number",
+      "fields": [
+        {
+          "name": "aadhaar",
+          "label": "Aadhaar Number",
+          "type": "text",
+          "regex": "^[0-9]{12}$",
+          "required": true,
+          "placeholder": "Enter 12-digit Aadhaar number",
+          "errorMessage": "Aadhaar number must be exactly 12 digits"
+        }
+      ],
+      "submitText": "Send OTP",
+      "endpoint": "/verify-aadhaar"
+    },
+    {
+      "id": 2,
+      "title": "OTP Verification",
+      "description": "Enter the OTP sent to your registered mobile number",
+      "fields": [
+        {
+          "name": "otp",
+          "label": "OTP",
+          "type": "text",
+          "regex": "^[0-9]{6}$",
+          "required": true,
+          "placeholder": "Enter 6-digit OTP",
+          "errorMessage": "OTP must be exactly 6 digits"
+        }
+      ],
+      "submitText": "Verify OTP",
+      "endpoint": "/verify-otp"
+    },
+    {
+      "id": 3,
+      "title": "PAN Details",
+      "description": "Enter your PAN card details",
+      "fields": [
+        {
+          "name": "pan",
+          "label": "PAN Number",
+          "type": "text",
+          "regex": "^[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}$",
+          "required": true,
+          "placeholder": "Enter PAN number (e.g., ABCDE1234F)",
+          "errorMessage": "PAN must be in format: 5 letters, 4 digits, 1 letter"
+        }
+      ],
+      "submitText": "Submit Registration",
+      "endpoint": "/submit"
+    }
+  ],
+  "dummyData": {
+    "validAadhaar": "123456789012",
+    "validOtp": "123456"
+  }
+}
