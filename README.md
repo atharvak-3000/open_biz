@@ -98,6 +98,22 @@ A full-stack web application that replicates the first two steps of the Udyam re
    
    The frontend will run on `http://localhost:3000`
 
+## Railway Deployment 🚀
+
+This application is **ready for Railway deployment!**
+
+### Quick Deploy Steps:
+1. Fork this repository to your GitHub account
+2. Sign up at [railway.app](https://railway.app)
+3. Create new project → "Deploy from GitHub repo"
+4. Deploy backend service with PostgreSQL database
+5. Deploy frontend service with API URL configuration
+6. Update environment variables and CORS settings
+
+📖 **Detailed Instructions:** See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete step-by-step guide.
+
+🌐 **Live Demo:** Deploy to get your production URLs!
+
 ## Testing
 
 ### Backend Tests
